@@ -1,14 +1,9 @@
-const input = document.querySelector("input")
-const loader = document.querySelector(".lds-spinner")
-const container = document.querySelector(".container")
-
 fetch(`https://restcountries.com/v3.1/name/peru`)
-.then((response) => response.json())
-.then(data => {
-    input.style.display = "block"
-    loader.style.display = "none"
-})
-
+    .then((response) => response.json())
+    .then(data => {
+        input.style.display = "block"
+        loader.style.display = "none"
+    })
 
 input.addEventListener("change", () => {
     fetch(`https://restcountries.com/v3.1/name/${input.value}`)
@@ -33,7 +28,9 @@ input.addEventListener("change", () => {
 
             container.insertAdjacentHTML("beforeend",html)
         })
-
+        faSolid.style.transform = `rotateX(${x + 180}deg)`
+        x+=180;
+        counrty.classList.toggle("counrtyShow")
     input.value =""
 })
 
@@ -48,3 +45,10 @@ function renderNumber(suffixes) {
         return i
     }
 }
+
+
+faSolid.addEventListener("click",() => {
+    faSolid.style.transform = `rotateX(${x + 180}deg)`
+    x+=180;
+    counrty.classList.toggle("counrtyShow")
+})

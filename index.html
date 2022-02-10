@@ -6,14 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="./script.js" defer></script>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="./js/variables.js" defer></script>
+    <script src="./js/script.js" defer></script>
+    <script src="./js/filter.js" defer></script>
     <title>Document</title>
 </head>
 
 <body>
-
-
     <div class="lds-spinner" id="loader">
         <div></div>
         <div></div>
@@ -28,11 +28,16 @@
         <div></div>
         <div></div>
     </div>
-    <input type="text" placeholder="Enter counrty">
+    <div class="input-box">
+        <input type="text" placeholder="Enter counrty" onkeyup="filtredElement()">
+        <i class="fa-solid fa-angle-down"></i>
+        <ul class="counrty">
 
+        </ul>
+    </div>
 
     <div class="container">
-        
+
     </div>
     <!-- <div class="card">
         <img src="https://mainfacts.com/media/images/coats_of_arms/pe.png" alt="">
