@@ -30,7 +30,7 @@ input.addEventListener("change", () => {
         })
         faSolid.style.transform = `rotateX(${x + 180}deg)`
         x+=180;
-        counrty.classList.toggle("counrtyShow")
+        counrty.classList.remove("counrtyShow")
     input.value =""
 })
 
